@@ -21,7 +21,7 @@ import plant.kz.aygolek.plantyoutube.DTO.PlantDTO;
 import plant.kz.aygolek.plantyoutube.DTO.SpecimenDTO;
 
 /**
- * Created by Lagrange-Support on 29/03/2018.
+ *  dauren anay on 29/03/2018.
  */
 
 public class SpecimenShowFragment extends ListFragment {
@@ -44,7 +44,7 @@ public class SpecimenShowFragment extends ListFragment {
         //specimenDAO = new SpecimenDAOStub();
         //specimenDAO = new OfflineSpecimenDAO(getActivity());
 
-        final List<SpecimenDTO> specimens = new ArrayList<SpecimenDTO>();
+        final List<SpecimenDTO> specimens = new ArrayList<>();
 
 
         FirebaseDatabase firebaseDbInstance = FirebaseDatabase.getInstance();
@@ -70,7 +70,8 @@ public class SpecimenShowFragment extends ListFragment {
             }
         });
         //search();
-        ArrayAdapter<SpecimenDTO> specimenDTOArrayAdapter = new ArrayAdapter<SpecimenDTO>(getActivity(),android.R.layout.simple_list_item_1, specimens);
+
+        ArrayAdapter<SpecimenDTO> specimenDTOArrayAdapter = new ArrayAdapter<>(getActivity(),android.R.layout.simple_list_item_1, specimens);
         setListAdapter(specimenDTOArrayAdapter);
     }
 
